@@ -49,14 +49,10 @@ class GameFragment : Fragment() {
     private fun play(i: Int, j: Int) {
         val couldItPlay = game.play(i, j)
         if (couldItPlay) {
-            if (game.xWon()) {
-                this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("x"))
-            }
-            if (game.oWon()) {
-                this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("o"))
-            }
-            if (game.tie()) {
-                this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("No one"))
+            when(true) {
+                game.xWon() -> this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("x"))
+                game.oWon() -> this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("o"))
+                game.tie()  -> this.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameoverFragment("No one"))
             }
             turn = game.getTurn()
             board = game.getBoard()

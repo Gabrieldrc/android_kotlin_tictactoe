@@ -5,4 +5,5 @@
     <string name="app_title">TicTacToe</string>
     <string name="start_button">Tab to start</string>
     <string name="new_game_button">Play again</string>
+    <string name="about_text">Tic-tac-toe is a great practice for android navigation and menu with kotlin.</string>
 </resources>

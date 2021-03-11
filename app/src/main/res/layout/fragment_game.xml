@@ -8,15 +8,17 @@
             name="game"
             type="com.gdrc.tictactoe.GameFragment" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/gameConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:background="@color/primary_color_dark">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/primary_color_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +30,6 @@
                 android:text="@{game.board[0][0]}"
                 app:layout_constraintBottom_toTopOf="@+id/button_10"
                 app:layout_constraintEnd_toStartOf="@+id/button_01"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -37,9 +38,9 @@
             <Button
                 android:id="@+id/button_01"
                 style="@style/game_buttons"
-                android:text="@{game.board[0][1]}"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
+                android:text="@{game.board[0][1]}"
                 app:layout_constraintBottom_toTopOf="@+id/button_11"
                 app:layout_constraintEnd_toStartOf="@+id/button_02"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -62,8 +63,6 @@
                 android:id="@+id/button_10"
                 style="@style/game_buttons"
                 android:text="@{game.board[1][0]}"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/button_20"
                 app:layout_constraintEnd_toStartOf="@+id/button_11"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -74,11 +73,9 @@
             <Button
                 android:id="@+id/button_11"
                 style="@style/game_buttons"
-                android:text="@{game.board[1][1]}"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
+                android:text="@{game.board[1][1]}"
                 app:layout_constraintBottom_toTopOf="@+id/button_21"
                 app:layout_constraintEnd_toStartOf="@+id/button_12"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -89,8 +86,6 @@
                 android:id="@+id/button_12"
                 style="@style/game_buttons"
                 android:text="@{game.board[1][2]}"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/button_22"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -100,6 +95,7 @@
             <Button
                 android:id="@+id/button_20"
                 style="@style/game_buttons"
+                android:layout_marginStart="5dp"
                 android:text="@{game.board[2][0]}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/button_21"
@@ -111,9 +107,9 @@
             <Button
                 android:id="@+id/button_21"
                 style="@style/game_buttons"
-                android:text="@{game.board[2][1]}"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
+                android:text="@{game.board[2][1]}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/button_22"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -123,6 +119,7 @@
             <Button
                 android:id="@+id/button_22"
                 style="@style/game_buttons"
+                android:layout_marginEnd="5dp"
                 android:text="@{game.board[2][2]}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
