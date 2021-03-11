@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GameFragment">
+    <data>
+        <variable
+            name="game"
+            type="com.gdrc.tictactoe.GameFragment" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/button_00"
+                style="@style/game_buttons"
+                android:text="@{game.board[0][0]}"
+                app:layout_constraintBottom_toTopOf="@+id/button_10"
+                app:layout_constraintEnd_toStartOf="@+id/button_01"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <Button
+                android:id="@+id/button_01"
+                style="@style/game_buttons"
+                android:text="@{game.board[0][1]}"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_11"
+                app:layout_constraintEnd_toStartOf="@+id/button_02"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_00"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <Button
+                android:id="@+id/button_02"
+                style="@style/game_buttons"
+                android:text="@{game.board[0][2]}"
+                app:layout_constraintBottom_toTopOf="@+id/button_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_01"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <Button
+                android:id="@+id/button_10"
+                style="@style/game_buttons"
+                android:text="@{game.board[1][0]}"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_20"
+                app:layout_constraintEnd_toStartOf="@+id/button_11"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_00" />
+
+            <Button
+                android:id="@+id/button_11"
+                style="@style/game_buttons"
+                android:text="@{game.board[1][1]}"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_21"
+                app:layout_constraintEnd_toStartOf="@+id/button_12"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_10"
+                app:layout_constraintTop_toBottomOf="@+id/button_01" />
+
+            <Button
+                android:id="@+id/button_12"
+                style="@style/game_buttons"
+                android:text="@{game.board[1][2]}"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_11"
+                app:layout_constraintTop_toBottomOf="@+id/button_02" />
+
+            <Button
+                android:id="@+id/button_20"
+                style="@style/game_buttons"
+                android:text="@{game.board[2][0]}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_21"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_10" />
+
+            <Button
+                android:id="@+id/button_21"
+                style="@style/game_buttons"
+                android:text="@{game.board[2][1]}"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_22"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_20"
+                app:layout_constraintTop_toBottomOf="@+id/button_11" />
+
+            <Button
+                android:id="@+id/button_22"
+                style="@style/game_buttons"
+                android:text="@{game.board[2][2]}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_21"
+                app:layout_constraintTop_toBottomOf="@+id/button_12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

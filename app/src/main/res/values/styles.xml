@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="game_buttons">
+        <item name="android:layout_width">100sp</item>
+        <item name="android:layout_height">100sp</item>
+        <item name="backgroundTint">@color/primary_color_light</item>
+        <item name="cornerRadius">0sp</item>
+        <item name="background">@color/primary_color_light</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>
